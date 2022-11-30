@@ -19,7 +19,6 @@ class Solution {
             pq.offer(new Element(matrix[i][0], i, 0));
         }
         Element curr=null;
-        int r,c,v;
         while(k-->0) {
             curr=pq.poll();
             if(curr.c+1<n) {
