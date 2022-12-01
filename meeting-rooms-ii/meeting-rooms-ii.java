@@ -9,7 +9,6 @@ class Solution {
                 found=true;
                 for(int[] t: lists.get(i)) {
                     if(((t[0]<=interval[0] && interval[0]<t[1]) || (t[0]<=interval[1] && interval[1]<t[1]))) {
-                        if(interval[0]==7) System.out.println("Came here");
                         found=false;
                         break;
                     }
@@ -23,12 +22,6 @@ class Solution {
                 lists.add(new ArrayList<>());
                 lists.get(lists.size()-1).add(interval);
             }
-        }
-        for(List<int[]> list: lists) {
-            for(int[] inter: list) {
-                System.out.println(inter[0]+" "+inter[1]);
-            }
-            System.out.println("");
         }
         return lists.size();
     }
