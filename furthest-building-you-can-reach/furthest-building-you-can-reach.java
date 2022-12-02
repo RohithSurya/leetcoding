@@ -10,7 +10,7 @@ class Solution {
             if(pq.size()>ladders) {
                 int least = pq.poll();
                 if(least>bricks) {
-                    System.out.println(i);
+                    // System.out.println(i);
                     break;
                 }
                 bricks-=least;
