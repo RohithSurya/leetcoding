@@ -13,9 +13,10 @@ class ValidWordAbbr {
     }
     
     String convertToAbbr(String word) {
-        if(word.length()<=2) return word;
+        int n=word.length();
+        if(n<=2) return word;
         else
-        return word.charAt(0)+""+(word.length()-2)+""+word.charAt(word.length()-1);
+        return String.format("%c%d%c", word.charAt(0), n-2, word.charAt(n-1));
     }
     
     public boolean isUnique(String word) {
