@@ -22,8 +22,7 @@ class ValidWordAbbr {
         String abbr = convertToAbbr(word);
         if(!map.containsKey(abbr)) return true;
         Set<String> set = map.get(abbr);
-        if(set.contains(word) && set.size()==1) return true;
-        return false;
+        return set.contains(word) && set.size()==1;
         
     }
 }
