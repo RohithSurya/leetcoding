@@ -5,6 +5,7 @@ class Solution {
         int n=nums.length;
   
         for(int i=0; i<n; i++) {
+            if(nums[i]>0) break;
             if(i!=0 && nums[i]==nums[i-1]) continue;
             twoSum(nums, i, n, list);
         }
