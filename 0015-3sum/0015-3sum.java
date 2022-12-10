@@ -13,19 +13,18 @@ class Solution {
     }
 
     public void twoSum(int[] nums, int i, int n, List<List<Integer>> list) {
-        int low = i+1;
-        int high = n-1;
-        while(low<high) {
-            int sum = nums[i]+nums[low]+nums[high];
-            if(sum==0) {
-                list.add(Arrays.asList(nums[i], nums[low], nums[high--]));
-                while(low<high && nums[high]==nums[high+1]) 
-                    high--;
-            } else if(sum>0) {
-                high--;
+        var low = i+1;
+        var hs = new HashSet<Integer>();
+        while(low<n) {
+            var target = -(nums[low]+nums[i]);
+            if(hs.contains(target)) {
+                // System.out.println("Came here");
+                list.add(Arrays.asList(nums[i], nums[low++], target ));
+                while(low<n &&nums[low]==nums[low-1]) low++;
             } else {
                 low++;
             }
+            hs.add(nums[low-1]);
         }
     }
 }
