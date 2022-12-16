@@ -17,7 +17,6 @@ class Solution {
         for(int i=index+1; i<a.length; i++) {
             int temp = target - (a[index]+a[i]);
             int fIndex = binarySearchGreaterOrEqual(a, temp, i);
-            int sum=0;
             int fsum=0, rsum=0;
             if(fIndex<a.length) {
                 if(temp==a[fIndex]) return target;
