@@ -22,20 +22,12 @@ class Solution {
             if(fIndex<a.length) {
                 if(temp==a[fIndex]) return target;
                 fsum = a[index]+a[i]+a[fIndex];
-                // System.out.println(fsum);
                 gsum = Math.abs(gsum-target) > Math.abs(fsum-target) ? fsum: gsum;
             }
             int rIndex = binarySearchLessOrEqual(a,temp, i);
             if(rIndex>i) {
                 if(temp==a[rIndex]) return target;
                 rsum = a[index]+a[i]+a[rIndex];
-                // System.out.println(index);
-                // System.out.println(i);
-                // System.out.println(rIndex);
-                // System.out.println("");
-                // System.out.println(rsum);
-                // System.out.println(gsum);
-                // System.out.println("");
                 gsum = Math.abs(gsum-target) > Math.abs(rsum-target)  ? rsum: gsum;
             }
         }
