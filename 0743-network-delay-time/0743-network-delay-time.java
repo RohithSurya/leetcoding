@@ -34,6 +34,10 @@ class Solution {
             adj.get(start).add(new Pair(end, weight));
         }
         
+        for(int node: adj.keySet()) {
+            Collections.sort(adj.get(node), (a,b)->a.getKey()-b.getKey());
+        }
+        
         
         int[] sRecv = new int[n+1];
         Arrays.fill(sRecv, Integer.MAX_VALUE);
