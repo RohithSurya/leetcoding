@@ -1,10 +1,10 @@
 class Solution {
     public int coinChange(int[] coins, int amount) {
-        coins = Arrays.stream(coins)
-        .boxed()
-        .sorted(Comparator.reverseOrder())
-        .mapToInt(Integer::intValue)
-        .toArray();
+        // coins = Arrays.stream(coins)
+        // .boxed()
+        // .sorted(Comparator.reverseOrder())
+        // .mapToInt(Integer::intValue)
+        // .toArray();
         int[] min = new int[amount+1];
         for(int i=0; i<=amount; i++) min[i]=-2;
         return coinChangeSub(coins, min, amount);
