@@ -6,17 +6,15 @@ class Solution {
             char prev = 0;
             for(String str: strs) {
                 if(i>=str.length()) {
-                    fullBreak = true; break;
+                    return strs[0].substring(0,i);
                 }
                 if(prev==0) prev=str.charAt(i);
                 else if(prev!=str.charAt(i)) {
-                    fullBreak = true;
-                    break;
+                    return strs[0].substring(0,i);
                 }
             }
-            if(fullBreak) break;
+            if(fullBreak) return strs[0].substring(0,i);;
             i++;
         }
-        return strs[0].substring(0,i);
     }
 }
