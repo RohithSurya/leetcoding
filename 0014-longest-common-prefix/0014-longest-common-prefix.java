@@ -17,7 +17,6 @@ class Solution {
             if(fullBreak) break;
             i++;
         }
-        if(i==0) return "";
         return strs[0].substring(0,i);
     }
 }
