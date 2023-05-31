@@ -13,7 +13,6 @@ class Solution {
                     return strs[0].substring(0,i);
                 }
             }
-            if(fullBreak) return strs[0].substring(0,i);;
             i++;
         }
     }
