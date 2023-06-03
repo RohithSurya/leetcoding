@@ -7,9 +7,8 @@ class Solution {
         }
         int maxNumber = nums[max];
         for(int i=0; i< nums.length; i++) {
-            if(i!=max) {
-                if(nums[max]<nums[i]*2)
-                    return -1;
+            if(i!=max && nums[max]<nums[i]*2) {
+                return -1;
             }
         }
         return max;
