@@ -1,11 +1,13 @@
 class Solution {
     public int heightChecker(int[] heights) {
-        var expectedHeights = heights.clone();
-        int cnt=0;
-        Arrays.sort(expectedHeights);
+        var expHeights = heights.clone();
+        var count=0;
+        Arrays.sort(expHeights);
         for(int i=0; i<heights.length; i++) {
-            if(expectedHeights[i]!=heights[i]) cnt++;
+            if(expHeights[i]!=heights[i]) {
+                count++;
+            }
         }
-        return cnt;
+        return count;
     }
 }
