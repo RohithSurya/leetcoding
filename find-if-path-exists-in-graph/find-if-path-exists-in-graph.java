@@ -11,16 +11,17 @@ class Solution {
             adjList.get(s).add(f);
         }
         
-        Stack<Integer> st = new Stack<Integer>();
-        st.push(source);
-        while(!st.empty()) {
-            var vert = st.pop();
-            if(vert==destination) return true;
-            if(hs.contains(vert)) continue;
-            hs.add(vert);
-            for(var edge: adjList.get(vert)) {
-                if(!hs.contains(edge)) {
-                    st.push(edge);
+        Queue<Integer> q = new LinkedList<>();
+        
+        q.add(source);
+        
+        while(!q.isEmpty()) {
+            var element = q.remove();
+            if(element==destination) return true;
+            if(!hs.contains(element)) {
+                hs.add(element);
+                for(var elt: adjList.get(element)) {
+                    if(!hs.contains(elt)) q.add(elt);
                 }
             }
         }
