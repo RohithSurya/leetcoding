@@ -13,11 +13,13 @@ class Solution {
         var visited = new int[n];
         visited[0]=1;
         var totalCost = 0;
+        int count = n-1;
         
-        while(!pq.isEmpty()) {
+        while(!pq.isEmpty() && count>0) {
             var edge = pq.remove();
             var j = edge[1];
             if(visited[j]==0) {
+                count--;
                 visited[j]=1;
                 totalCost+=edge[2];
                 var curr = points[j];
