@@ -31,7 +31,7 @@ class Solution {
             for(int i=0; i<size; i++) {
                 var el = q.remove();
                 curr.add(el.val);
-                for(var node: el.children) q.add(node);
+                q.addAll(el.children);
             }
             rList.add(curr);
         }
