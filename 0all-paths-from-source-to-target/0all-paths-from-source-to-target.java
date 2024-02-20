@@ -10,13 +10,11 @@ class Solution {
             var element = path.get(path.size()-1);
             if(element==dest) rList.add(path);
             visited.add(element);
-                for(var el: graph[element]) {
-                    // if(!visited.contains(el)) {
-                        var nPath = new ArrayList<Integer>(path);
-                        nPath.add(el);
-                        q.add(nPath);
-                    }
-                // }
+            for(var el: graph[element]) {
+                var nPath = new ArrayList<Integer>(path);
+                nPath.add(el);
+                q.add(nPath);
+            }
         }
         return rList;
     }
