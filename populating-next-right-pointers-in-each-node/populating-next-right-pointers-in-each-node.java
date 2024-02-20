@@ -33,10 +33,11 @@ class Solution {
                 var node = q.remove();
                 node.next=prev;
                 prev=node;
-                if(node.right!=null)
-                q.add(node.right);
-                if(node.left!=null)
-                q.add(node.left);
+                if(node.right!=null) {
+                    q.add(node.right);
+                    q.add(node.left);
+                }
+               
             }
         }
         return root;
